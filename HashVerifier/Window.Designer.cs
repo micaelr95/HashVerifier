@@ -41,6 +41,9 @@
             this.textBoxGeneratedSHA1 = new System.Windows.Forms.TextBox();
             this.buttonVerify = new System.Windows.Forms.Button();
             this.labelResult = new System.Windows.Forms.Label();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxFilePath
@@ -103,9 +106,9 @@
             // 
             // textBoxGeneratedMD5
             // 
-            this.textBoxGeneratedMD5.Enabled = false;
             this.textBoxGeneratedMD5.Location = new System.Drawing.Point(109, 88);
             this.textBoxGeneratedMD5.Name = "textBoxGeneratedMD5";
+            this.textBoxGeneratedMD5.ReadOnly = true;
             this.textBoxGeneratedMD5.Size = new System.Drawing.Size(349, 20);
             this.textBoxGeneratedMD5.TabIndex = 7;
             // 
@@ -129,9 +132,9 @@
             // 
             // textBoxGeneratedSHA1
             // 
-            this.textBoxGeneratedSHA1.Enabled = false;
             this.textBoxGeneratedSHA1.Location = new System.Drawing.Point(109, 115);
             this.textBoxGeneratedSHA1.Name = "textBoxGeneratedSHA1";
+            this.textBoxGeneratedSHA1.ReadOnly = true;
             this.textBoxGeneratedSHA1.Size = new System.Drawing.Size(349, 20);
             this.textBoxGeneratedSHA1.TabIndex = 10;
             // 
@@ -153,11 +156,28 @@
             this.labelResult.Size = new System.Drawing.Size(0, 13);
             this.labelResult.TabIndex = 12;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 168);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(546, 22);
+            this.statusStrip1.TabIndex = 13;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(173, 17);
+            this.toolStripStatusLabel1.Text = "Developed by Micael Rodrigues";
+            // 
             // Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(546, 169);
+            this.ClientSize = new System.Drawing.Size(546, 190);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.labelResult);
             this.Controls.Add(this.buttonVerify);
             this.Controls.Add(this.textBoxGeneratedSHA1);
@@ -171,8 +191,12 @@
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxFilePath);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Window";
-            this.Text = "Hash Verifier";
+            this.Text = "Simple Hash Verifier";
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,6 +217,8 @@
         private System.Windows.Forms.TextBox textBoxGeneratedSHA1;
         private System.Windows.Forms.Button buttonVerify;
         private System.Windows.Forms.Label labelResult;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
 
